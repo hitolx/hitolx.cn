@@ -1,23 +1,19 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { MainComponent } from './layouts/main/main.component';
-import { NavbarComponent } from './layouts/navbar/navbar.component';
 import {AppRoutingModule} from "./app-routing.module";
-import {ContentModule} from "./content/content.module";
-import {HomeComponent} from "./home/home.component";
+import { IndexComponent } from './index/index.component';
+import {ShareModule} from "./share/share.module";
+import {LayoutsModule} from "./layouts/layouts.module";
 
 @NgModule({
   declarations: [
-    MainComponent,
-    NavbarComponent,
-    HomeComponent,
+    IndexComponent,
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    ContentModule,
+    ShareModule,
+    LayoutsModule,
   ],
   providers: [],
-  bootstrap: [MainComponent]
+  bootstrap: [IndexComponent]
 })
 export class AppModule { }
